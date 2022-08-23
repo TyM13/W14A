@@ -3,7 +3,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    name() {},
+  },
+};
 </script>
 
 <style scoped>
