@@ -28,6 +28,22 @@ export default {
           error;
         });
     },
+
+    change_joke_loud(handle_loud) {
+      this.joke = handle_loud;
+    },
+
+    change_joke_snake(handle_snake) {
+      this.joke = handle_snake;
+    },
+    change_joke_normal(handle_normal) {
+      this.joke = handle_normal;
+    },
+  },
+  mounted() {
+    this.$root.$on(`loud`, this.change_joke_loud),
+      this.$root.$on(`snake`, this.change_joke_snake),
+      this.$root.$on(`normal`, this.change_joke_normal);
   },
 };
 </script>

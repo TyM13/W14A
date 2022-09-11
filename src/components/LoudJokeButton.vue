@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button @click="loud_joke">display loud</button>
+    <button @click="display_loud_joke">display loud</button>
   </div>
 </template>
 
@@ -15,6 +15,10 @@ export default {
   methods: {
     loud_joke(joke) {
       this.joke = joke.toUpperCase();
+    },
+
+    display_loud_joke() {
+      this.$root.$emit(`loud`, this.joke);
     },
   },
 
